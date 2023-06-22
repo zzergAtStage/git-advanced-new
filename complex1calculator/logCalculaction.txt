@@ -1,0 +1,4 @@
+Jun 21, 2023 12:54:13 PM oop.seminars.s071.complex1calculator.model.FileLogger logEvent
+INFO:  Complex Numbers Calculator starts...
+Jun 21, 2023 12:54:19 PM oop.seminars.s071.complex1calculator.model.FileLogger logEvent
+INFO: Calculated add: oop.seminars.s071.complex1calculator.model.ComplexNumber@4631b923
