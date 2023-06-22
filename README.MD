@@ -6,3 +6,5 @@
 
 <p> <a href=" https://github.com/zzergAtStage/git-advanced-new.git" title="Git advanced"> git-advanced-new </a></p>
 </details>
+
+### Some added text
