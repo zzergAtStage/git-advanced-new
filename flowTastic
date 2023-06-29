@@ -1,0 +1,52 @@
+package main
+
+import (
+	"fmt"
+	"math/rand"
+	"time"
+)
+
+func bubbleSort(numbers []int) []int {
+	N := len(numbers)
+	for i := 0; i < N; i++ {
+		if !sweep(numbers, i) {
+			return numbers
+		}
+	}
+	return numbers
+}
+
+func sweep(numbers []int, prevPasses int) bool {
+	N := len(numbers)
+	firstIndex := 0
+	secondIndex := 1
+	didSwap := false
+
+	for secondIndex < (N - prevPasses) {
+		firstNumber := numbers[firstIndex]
+		secondNumber := numbers[secondIndex]
+
+		if firstNumber > secondNumber {
+			numbers[firstIndex] = secondNumber
+			numbers[secondIndex] = firstNumber
+			didSwap = true
+		}
+
+		firstIndex++
+		secondIndex++
+	}
+
+	return didSwap
+}
+
+func main() {
+	rand.Seed(time.Now().UnixNano())
+	toSort := make([]int, 10)
+
+	for i := 0; i < 10; i++ {
+		toSort[i] = rand.Intn(100)
+	}
+
+	fmt.Println("random array:", toSort)
+	fmt.Println("sorted array:", bubbleSort(toSort))
+}
